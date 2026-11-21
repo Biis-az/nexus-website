@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import './App.css'
 
 const services = [
@@ -68,6 +69,39 @@ const projects = [
 ]
 
 function App() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formStatus, setFormStatus] = useState('')
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+
+    const form = event.currentTarget
+
+    setIsSubmitting(true)
+    setFormStatus('')
+
+    try {
+      const response = await fetch('https://formspree.io/f/xyewdreq', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+
+      if (response.ok) {
+        setFormStatus('success')
+        form.reset()
+      } else {
+        setFormStatus('error')
+      }
+    } catch (error) {
+      setFormStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <>
       <header className="site-header">
@@ -441,15 +475,19 @@ function App() {
                 <span>✉</span>
                 <div>
                   <small>EMAIL</small>
-                  <p>Contact details to be configured</p>
+                  <p>
+                    <a href="mailto:biisbiis2244@gmail.com">
+                      biisbiis2244@gmail.com
+                    </a>
+                  </p>
                 </div>
               </div>
 
               <div className="contact-detail">
                 <span>↗</span>
                 <div>
-                  <small>PHONE</small>
-                  <p>Contact details to be configured</p>
+                  <small>PHONE / WHATSAPP</small>
+                  <p>Coming soon</p>
                 </div>
               </div>
 
@@ -458,7 +496,7 @@ function App() {
 
             <form
               className="quote-form"
-              onSubmit={(event) => event.preventDefault()}
+              onSubmit={handleSubmit}
             >
               <p className="form-heading">REQUEST A CONSULTATION</p>
 
@@ -471,6 +509,7 @@ function App() {
                     type="text"
                     placeholder="Your name"
                     autoComplete="name"
+                    required
                   />
                 </div>
 
@@ -482,6 +521,7 @@ function App() {
                     type="email"
                     placeholder="you@example.com"
                     autoComplete="email"
+                    required
                   />
                 </div>
               </div>
@@ -489,8 +529,15 @@ function App() {
               <div className="form-field">
                 <label htmlFor="service">Service Required</label>
 
-                <select id="service" name="service" defaultValue="">
-                  <option value="" disabled>Select a service</option>
+                <select
+                  id="service"
+                  name="service"
+                  defaultValue=""
+                  required
+                >
+                  <option value="" disabled>
+                    Select a service
+                  </option>
                   <option>CCTV & Security Systems</option>
                   <option>Networking & Internet Solutions</option>
                   <option>IT Support & Maintenance</option>
@@ -508,16 +555,36 @@ function App() {
                   name="message"
                   rows="5"
                   placeholder="Tell us a little about what you need..."
+                  required
                 />
               </div>
 
-              <button className="form-submit" type="submit">
-                Send Inquiry <span>↗</span>
+              <button
+                className="form-submit"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+                <span>↗</span>
               </button>
 
-              <p className="form-note">
-                Demo form — submission will be connected to a backend later.
-              </p>
+              {formStatus === 'success' && (
+                <p className="form-note" role="status">
+                  Thank you! Your inquiry has been sent successfully.
+                </p>
+              )}
+
+              {formStatus === 'error' && (
+                <p className="form-note" role="alert">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+
+              {!formStatus && (
+                <p className="form-note">
+                  Your inquiry will be sent directly to our team.
+                </p>
+              )}
             </form>
           </div>
         </section>

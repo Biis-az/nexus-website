@@ -1472,3 +1472,370 @@ textarea:focus-visible {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* =========================================
+   NEXUS IDENTITY 01
+   CREATIVE DIGITAL STUDIO
+========================================= */
+
+:root {
+  --graphite: #202124;
+  --forest: #202124;
+  --forest-soft: #30333a;
+  --lime: #3155D9;
+  --lime-dark: #2444bd;
+  --ink: #202124;
+  --muted: #70717a;
+  --ivory: #F7F5EF;
+  --white: #ffffff;
+  --line: #e8e5dd;
+  --orange: #FF7545;
+  --radius: 20px;
+  --shadow: 0 22px 60px rgba(32, 33, 36, 0.09);
+}
+
+html,
+body {
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+/* HEADER */
+
+.site-header {
+  background: rgba(32, 33, 36, 0.97);
+}
+
+.brand-mark {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: #202124;
+  border-radius: 12px;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+.nav-cta {
+  background: var(--orange);
+  color: #202124;
+}
+
+.nav-cta:hover {
+  background: #ff9069;
+}
+
+/* HERO */
+
+.hero-section {
+  background:
+    radial-gradient(
+      circle at 78% 45%,
+      rgba(49, 85, 217, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      #202124 0%,
+      #292c35 55%,
+      #263b78 100%
+    );
+}
+
+.hero-glow {
+  background: rgba(255, 117, 69, 0.12);
+}
+
+.hero-section h1 {
+  letter-spacing: -3px;
+}
+
+.gradient-text {
+  color: var(--orange);
+}
+
+.status-dot {
+  background: var(--orange);
+  box-shadow: 0 0 14px var(--orange);
+}
+
+.button-primary {
+  background: var(--orange);
+  color: #202124;
+}
+
+.button-primary:hover {
+  background: #ff9069;
+}
+
+.button-outline:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.hero-trust i {
+  background: var(--orange);
+}
+
+/* HERO 3D GEOMETRIC VISUAL */
+
+.visual-orbit {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.orbit-one {
+  border: 2px solid rgba(255, 117, 69, 0.65);
+  box-shadow: 0 0 35px rgba(255, 117, 69, 0.08);
+}
+
+.orbit-two {
+  border-color: rgba(49, 85, 217, 0.6);
+}
+
+.orbit-three {
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.visual-center {
+  background: linear-gradient(145deg, #3155D9, #202124);
+  border: 1px solid rgba(255, 117, 69, 0.8);
+  border-radius: 30px;
+  transform: rotate(-8deg);
+  box-shadow:
+    0 25px 65px rgba(49, 85, 217, 0.35),
+    0 0 35px rgba(255, 117, 69, 0.13);
+}
+
+.visual-center-icon {
+  color: #ffffff;
+}
+
+.visual-node {
+  background: rgba(32, 33, 36, 0.96);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.node-icon {
+  background: rgba(49, 85, 217, 0.25);
+  color: var(--orange);
+}
+
+/* INTRO STRIP */
+
+.intro-strip {
+  background: #ebe8df;
+  color: #363841;
+}
+
+.intro-strip i {
+  background: var(--orange);
+}
+
+/* SECTION HEADINGS */
+
+.eyebrow {
+  color: var(--lime);
+}
+
+.section-light {
+  background: #F7F5EF;
+}
+
+.section-heading h2 span,
+.contact-heading h2 span {
+  color: var(--lime);
+}
+
+/* SERVICES */
+
+.service-card {
+  border-color: #e8e5dd;
+  border-radius: 20px;
+}
+
+.service-card:hover {
+  border-color: rgba(49, 85, 217, 0.4);
+}
+
+.service-icon {
+  background: #edf0ff;
+  color: var(--lime);
+}
+
+.service-category,
+.project-type {
+  color: var(--lime);
+}
+
+.service-tags span {
+  background: #f0f1f8;
+  color: #51566b;
+}
+
+.service-link {
+  color: var(--lime);
+}
+
+.service-link:hover {
+  color: var(--orange);
+}
+
+/* ABOUT */
+
+.about-section {
+  background: #eeece5;
+}
+
+.about-visual-grid {
+  border-color: #d9d7d0;
+  background-image:
+    linear-gradient(rgba(49, 85, 217, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 85, 217, 0.08) 1px, transparent 1px);
+}
+
+.about-main-card {
+  background: linear-gradient(145deg, #202124, #3155D9);
+}
+
+.about-card-label {
+  color: #ffb49b;
+}
+
+.about-symbol {
+  color: var(--orange);
+}
+
+.about-floating-card {
+  border-color: #e6e2d9;
+}
+
+.floating-icon {
+  background: #fff0e9;
+  color: var(--orange);
+}
+
+.about-content h2 span,
+.about-points span {
+  color: var(--lime);
+}
+
+.text-link {
+  color: var(--lime);
+}
+
+.text-link:hover {
+  color: var(--orange);
+}
+
+/* PROJECTS */
+
+.project-art {
+  background: linear-gradient(135deg, #202124, #3155D9);
+}
+
+.project-network {
+  background: linear-gradient(135deg, #202124, #405fc7);
+}
+
+.project-digital {
+  background: linear-gradient(135deg, #202124, #bd593d);
+}
+
+.project-art-icon {
+  color: var(--orange);
+  border-color: rgba(255, 117, 69, 0.7);
+  background: rgba(255, 117, 69, 0.1);
+}
+
+/* PROCESS */
+
+.process-section {
+  background: linear-gradient(120deg, #202124, #29345d);
+}
+
+.process-heading h2 span {
+  color: var(--orange);
+}
+
+.process-step {
+  border-top-color: var(--orange);
+}
+
+.process-step > span {
+  color: var(--orange);
+}
+
+.process-step:hover {
+  background: rgba(49, 85, 217, 0.2);
+}
+
+/* CONTACT */
+
+.contact-section {
+  background: #eeece5;
+}
+
+.contact-info {
+  background: linear-gradient(145deg, #202124, #3155D9);
+}
+
+.contact-kicker {
+  color: var(--orange);
+}
+
+.contact-detail > span {
+  background: rgba(255, 117, 69, 0.16);
+  color: var(--orange);
+}
+
+.form-heading {
+  color: var(--lime);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--lime);
+  box-shadow: 0 0 0 3px rgba(49, 85, 217, 0.13);
+}
+
+.form-submit {
+  background: var(--lime);
+  color: white;
+}
+
+.form-submit:hover {
+  background: #2444bd;
+}
+
+/* FOOTER */
+
+.site-footer {
+  background: #202124;
+}
+
+.footer-column h4 {
+  color: var(--orange);
+}
+
+.footer-column a:hover {
+  color: var(--orange);
+}
+
+/* GENERAL INTERACTION */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: var(--orange);
+}
+
+/* ACCESSIBILITY */
+
+::selection {
+  background: var(--lime);
+  color: white;
+}
