@@ -4,314 +4,567 @@ import './App.css'
 const services = [
   {
     number: '01',
-    title: 'CCTV & Surveillance',
+    icon: '◉',
+    category: 'SECURITY SYSTEMS',
+    title: 'CCTV & Security Systems',
     description:
-      'Professional IP camera installation, NVR configuration, remote monitoring and surveillance maintenance.',
-    icon: '📹',
+      'Complete surveillance solutions, from system design and camera installation to NVR/DVR configuration, remote monitoring and maintenance.',
+    tags: ['IP Cameras', 'NVR / DVR', 'Access Control'],
   },
   {
     number: '02',
-    title: 'Access Control',
+    icon: '⌘',
+    category: 'NETWORKING & CONNECTIVITY',
+    title: 'Networking & Internet Solutions',
     description:
-      'Smart access control systems, biometric devices, RFID readers and secure door management.',
-    icon: '🔐',
+      'Reliable business connectivity through network planning, structured cabling, router and switch configuration, and Wi-Fi solutions.',
+    tags: ['LAN / WAN', 'Wi-Fi', 'Routers & Switches'],
   },
   {
     number: '03',
-    title: 'Networking & Infrastructure',
+    icon: '▣',
+    category: 'TECHNICAL SERVICES',
+    title: 'IT Support & Maintenance',
     description:
-      'Network design, structured cabling, switches, routers, Wi-Fi and reliable IT infrastructure.',
-    icon: '🌐',
+      'Practical IT support covering computer maintenance, operating system installation, software configuration and technical troubleshooting.',
+    tags: ['PC Maintenance', 'Windows', 'Technical Support'],
   },
   {
     number: '04',
-    title: 'IT Support',
+    icon: '◇',
+    category: 'DIGITAL SOLUTIONS',
+    title: 'Web & Digital Solutions',
     description:
-      'Computer maintenance, Windows Server administration, troubleshooting and technical support.',
-    icon: '💻',
+      'Modern websites and digital business tools designed to improve online presence, organize information and support business workflows.',
+    tags: ['Web Development', 'Business Tools', 'Web Maintenance'],
+  },
+]
+
+const projects = [
+  {
+    className: 'project-security',
+    number: '01',
+    category: 'SECURITY SYSTEMS',
+    title: 'IP Surveillance Concept',
+    description:
+      'A demonstration concept for an IP camera network with centralized recording, monitoring and secure remote access.',
+  },
+  {
+    className: 'project-network',
+    number: '02',
+    category: 'NETWORKING',
+    title: 'Business Network Concept',
+    description:
+      'A sample structured network design showing managed switching, wireless connectivity and organized infrastructure.',
+  },
+  {
+    className: 'project-digital',
+    number: '03',
+    category: 'WEB & DIGITAL',
+    title: 'Business Website Concept',
+    description:
+      'A modern responsive website concept designed to present services clearly and create a professional digital presence.',
   },
 ]
 
 function App() {
   return (
     <>
-      <header className="navbar">
-        <div className="logo">
-          NEXUS<span>TECHNOLOGIES</span>
-        </div>
+      <header className="site-header">
+        <a className="brand" href="#home">
+          <span className="brand-mark">N</span>
+          <span className="brand-name">
+            NEXUS
+            <small>TECHNOLOGIES</small>
+          </span>
+        </a>
 
-        <nav>
+        <nav className="nav-links">
           <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
-          <a href="#projects">Projects</a>
+          <a href="#services">Solutions</a>
+          <a href="#about">About</a>
+          <a href="#projects">Portfolio</a>
           <a href="#contact">Contact</a>
         </nav>
 
-       <a href="#contact" className="quote-button">
-  Request a Quote
-</a>
+        <a href="#contact" className="nav-cta">
+          Let's Talk <span>↗</span>
+        </a>
       </header>
 
       <main>
+        {/* HERO */}
         <section id="home" className="hero-section">
-          <p className="hero-label">
-            SECURITY & IT SOLUTIONS IN QATAR
-          </p>
+          <div className="hero-glow" />
 
-          <h1>
-            Smart Security.
-            <br />
-            <span>Reliable Technology.</span>
-          </h1>
+          <div className="hero-container">
+            <div className="hero-content">
+              <p className="eyebrow hero-eyebrow">
+                <span className="status-dot" />
+                SECURITY & TECHNOLOGY SOLUTIONS
+              </p>
 
-          <p className="hero-description">
-            Professional CCTV, networking, access control
-            and IT infrastructure solutions for modern businesses.
-          </p>
+              <h1>
+                Technology that
+                <br />
+                moves your business
+                <br />
+                <span className="gradient-text">forward.</span>
+              </h1>
 
-          <div className="hero-actions">
-           <a href="#services">Explore Our Services</a>
-           <a href="#contact" className="secondary-button">Contact Us</a>
-          </div>  
+              <p className="hero-description">
+                Smart security, reliable connectivity and practical digital
+                solutions designed to help modern businesses work with
+                confidence.
+              </p>
+
+              <div className="hero-actions">
+                <a href="#services" className="button button-primary">
+                  Explore Solutions <span>↗</span>
+                </a>
+
+                <a href="#contact" className="button button-outline">
+                  Get in Touch
+                </a>
+              </div>
+
+              <div className="hero-trust">
+                <span>SECURITY</span>
+                <i />
+                <span>NETWORKING</span>
+                <i />
+                <span>IT & DIGITAL</span>
+              </div>
+            </div>
+
+            <div className="hero-visual">
+              <div className="visual-orbit orbit-one" />
+              <div className="visual-orbit orbit-two" />
+              <div className="visual-orbit orbit-three" />
+
+              <div className="visual-center">
+                <span className="visual-center-icon">N</span>
+                <small>NEXUS</small>
+              </div>
+
+              <div className="visual-node node-security">
+                <span className="node-icon">◉</span>
+                <small>SECURITY</small>
+              </div>
+
+              <div className="visual-node node-network">
+                <span className="node-icon">⌘</span>
+                <small>NETWORK</small>
+              </div>
+
+              <div className="visual-node node-it">
+                <span className="node-icon">▣</span>
+                <small>IT SUPPORT</small>
+              </div>
+
+              <div className="visual-node node-digital">
+                <span className="node-icon">◇</span>
+                <small>DIGITAL</small>
+              </div>
+
+              <p className="visual-caption">
+                CONNECTED SYSTEMS. SMARTER BUSINESS.
+              </p>
+            </div>
+          </div>
+
+          <div className="hero-bottom">
+            <span>INTEGRATED TECHNOLOGY</span>
+            <span>01 / 04</span>
+          </div>
         </section>
 
-        <section id="services" className="services-section">
-          <p>WHAT WE DO</p>
-          <h2>Our Core Services</h2>
+        {/* INTRO STRIP */}
+        <div className="intro-strip">
+          <span>Security Systems</span>
+          <i />
+          <span>Networking</span>
+          <i />
+          <span>IT Support</span>
+          <i />
+          <span>Digital Solutions</span>
+        </div>
+
+        {/* SERVICES */}
+        <section id="services" className="services-section section-light">
+          <div className="section-heading">
+            <p className="eyebrow">WHAT WE DO</p>
+
+            <h2>
+              Technology solutions.
+              <br />
+              <span>Built around your business.</span>
+            </h2>
+
+            <p className="section-intro">
+              From protecting your premises to connecting your people and
+              systems, explore our core technology services.
+            </p>
+          </div>
 
           <div className="services-grid">
             {services.map((service) => (
-              <div className="service-card" key={service.number}>
-                <span className="service-icon">{service.icon}</span>
-                <span className="service-number">{service.number}</span>
+              <article className="service-card" key={service.number}>
+                <div className="service-card-top">
+                  <span className="service-icon">{service.icon}</span>
+                  <span className="service-number">{service.number}</span>
+                </div>
+
+                <p className="service-category">{service.category}</p>
 
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
 
-                <a href="#contact">Learn More →</a>
-              </div>
+                <p className="service-description">
+                  {service.description}
+                </p>
+
+                <div className="service-tags">
+                  {service.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+
+                <a className="service-link" href="#contact">
+                  Discuss this service <span>↗</span>
+                </a>
+              </article>
             ))}
           </div>
         </section>
 
+        {/* ABOUT */}
         <section id="about" className="about-section">
+          <div className="about-visual">
+            <div className="about-visual-grid">
+              <div className="about-main-card">
+                <span className="about-card-label">NEXUS / SYSTEMS</span>
+
+                <div className="about-symbol">
+                  N<span>.</span>
+                </div>
+
+                <p>Technology with purpose.</p>
+              </div>
+
+              <div className="about-floating-card">
+                <span className="floating-icon">✳</span>
+
+                <div>
+                  <strong>Connected</strong>
+                  <small>Made to work together</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="about-content">
-            <p className="about-label">WHO WE ARE</p>
+            <p className="eyebrow">WHO WE ARE</p>
 
             <h2>
-              Technology That Protects.
-              <span> Solutions That Connect.</span>
+              We connect the pieces that
+              <span> move business forward.</span>
             </h2>
 
             <p className="about-description">
-              NEXUS TECHNOLOGIES is a Qatar-based IT and security
-              solutions company focused on delivering reliable
-              technology services for businesses and organizations.
+              NEXUS TECHNOLOGIES is a technology solutions brand focused on
+              helping businesses make better use of security, networking,
+              technical support and digital tools.
             </p>
 
             <p className="about-description">
-              Our services cover CCTV surveillance, access control,
-              network infrastructure and professional IT support.
-              We believe in secure systems, dependable service
-              and long-term partnerships.
+              Our approach is straightforward: understand the requirement,
+              design a practical solution and keep the technology reliable.
+              We believe good technology should make everyday work simpler,
+              safer and more connected.
             </p>
-          </div>
 
-          <div className="about-highlight">
-            <span>OUR COMMITMENT</span>
-            <h3>Smart Solutions.<br />Stronger Connections.</h3>
-            <p>
-              Building reliable technology foundations for
-              modern businesses.
-            </p>
+            <div className="about-points">
+              <div>
+                <span>01</span>
+                <p>Practical, business-focused solutions</p>
+              </div>
+
+              <div>
+                <span>02</span>
+                <p>Clear planning and organized delivery</p>
+              </div>
+
+              <div>
+                <span>03</span>
+                <p>Reliable support and improvement</p>
+              </div>
+            </div>
+
+            <a href="#contact" className="text-link">
+              Let's discuss your requirements <span>↗</span>
+            </a>
           </div>
         </section>
 
-        <section id="projects" className="projects-section">
-          <div className="projects-heading">
-            <p>OUR PORTFOLIO</p>
-            <h2>Featured Projects</h2>
-            <span>
-              Explore sample solutions demonstrating our technical capabilities.
-            </span>
+        {/* PORTFOLIO */}
+        <section id="projects" className="projects-section section-light">
+          <div className="section-heading">
+            <p className="eyebrow">SELECTED CONCEPTS</p>
+
+            <h2>
+              Ideas brought <span>into focus.</span>
+            </h2>
+
+            <p className="section-intro">
+              A preview of the type of solutions and digital experiences
+              represented by the NEXUS TECHNOLOGIES portfolio.
+            </p>
           </div>
 
           <div className="projects-grid">
-            <div className="project-card">
-              <div className="project-image cctv-image">
-                CCTV SYSTEM
-              </div>
-              <div className="project-info">
-                <span>SECURITY SYSTEMS</span>
-                <h3>IP Surveillance Solution</h3>
-                <p>
-                  A sample IP camera and NVR surveillance solution
-                  for a commercial facility.
-                </p>
-              </div>
-            </div>
+            {projects.map((project) => (
+              <article className="project-card" key={project.number}>
+                <div className={`project-art ${project.className}`}>
+                  <div className="project-art-grid" />
 
-            <div className="project-card">
-              <div className="project-image network-image">
-                NETWORK INFRASTRUCTURE
-              </div>
-              <div className="project-info">
-                <span>NETWORKING</span>
-                <h3>Enterprise Network Setup</h3>
-                <p>
-                  A sample structured network design with managed
-                  switches and secure connectivity.
-                </p>
-              </div>
-            </div>
+                  <span className="project-art-icon">
+                    {project.number === '01'
+                      ? '◉'
+                      : project.number === '02'
+                        ? '⌘'
+                        : '◇'}
+                  </span>
 
-            <div className="project-card">
-              <div className="project-image access-image">
-                ACCESS CONTROL
-              </div>
-              <div className="project-info">
-                <span>ACCESS CONTROL</span>
-                <h3>Smart Access Solution</h3>
-                <p>
-                  A sample biometric and RFID access control
-                  system for secure entry management.
-                </p>
-              </div>
-            </div>
+                  <span className="project-art-number">
+                    {project.number}
+                  </span>
+
+                  <span className="project-art-label">
+                    NEXUS / CONCEPT
+                  </span>
+                </div>
+
+                <div className="project-info">
+                  <p className="project-type">{project.category}</p>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
 
           <p className="project-disclaimer">
-            Demonstration portfolio – sample concepts, not completed client projects.
+            Portfolio preview: these are demonstration concepts, not claims
+            of completed client projects.
           </p>
         </section>
 
+        {/* PROCESS */}
+        <section className="process-section">
+          <div className="section-heading process-heading">
+            <p className="eyebrow">HOW WE WORK</p>
 
+            <h2>
+              A clear path from <span>need to solution.</span>
+            </h2>
+          </div>
+
+          <div className="process-grid">
+            <article className="process-step">
+              <span>01</span>
+              <h3>Discover</h3>
+              <p>
+                Understand your goals, environment and technical requirements.
+              </p>
+            </article>
+
+            <article className="process-step">
+              <span>02</span>
+              <h3>Design</h3>
+              <p>
+                Plan a solution that is practical, scalable and fit for purpose.
+              </p>
+            </article>
+
+            <article className="process-step">
+              <span>03</span>
+              <h3>Connect</h3>
+              <p>
+                Bring the right systems, devices and digital tools together.
+              </p>
+            </article>
+
+            <article className="process-step">
+              <span>04</span>
+              <h3>Improve</h3>
+              <p>
+                Review, maintain and improve the solution as needs evolve.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        {/* CONTACT */}
         <section id="contact" className="contact-section">
           <div className="contact-heading">
-            <p>GET IN TOUCH</p>
-            <h2>Let's Build Something Reliable.</h2>
-            <span>
-              Tell us about your project and our team will be ready to help.
-            </span>
+            <p className="eyebrow">START A CONVERSATION</p>
+
+            <h2>
+              Let's build something <span>that works.</span>
+            </h2>
+
+            <p>
+              Tell us what you need. We'll help you explore the right direction.
+            </p>
           </div>
 
           <div className="contact-container">
             <div className="contact-info">
-              <h3>Contact Information</h3>
-              <p>
-                Have a question or need a technical solution?
-                Send us your inquiry.
+              <p className="contact-kicker">NEXUS TECHNOLOGIES</p>
+
+              <h3>Have a project in mind?</h3>
+
+              <p className="contact-info-copy">
+                Share a few details about your requirements and the service
+                you are looking for.
               </p>
 
-              <div className="contact-item">
-                <span>📍</span>
+              <div className="contact-detail">
+                <span>⌖</span>
                 <div>
-                  <h4>Location</h4>
+                  <small>LOCATION</small>
                   <p>Doha, Qatar</p>
                 </div>
               </div>
 
-              <div className="contact-item">
-                <span>✉️</span>
+              <div className="contact-detail">
+                <span>✉</span>
                 <div>
-                  <h4>Email</h4>
-                  <p>Demo contact – to be configured</p>
+                  <small>EMAIL</small>
+                  <p>Contact details to be configured</p>
                 </div>
               </div>
 
-              <div className="contact-item">
-                <span>☎️</span>
+              <div className="contact-detail">
+                <span>↗</span>
                 <div>
-                  <h4>Phone</h4>
-                  <p>Demo contact – to be configured</p>
+                  <small>PHONE</small>
+                  <p>Contact details to be configured</p>
                 </div>
               </div>
+
+              <div className="contact-decoration">N.</div>
             </div>
 
             <form
               className="quote-form"
               onSubmit={(event) => event.preventDefault()}
             >
-              <h3>Request a Quote</h3>
+              <p className="form-heading">REQUEST A CONSULTATION</p>
 
-              <label htmlFor="fullName">Full Name</label>
-              <input
-                id="fullName"
-                type="text"
-                placeholder="Enter your name"
-              />
+              <div className="form-row">
+                <div className="form-field">
+                  <label htmlFor="fullName">Full Name</label>
+                  <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    placeholder="Your name"
+                    autoComplete="name"
+                  />
+                </div>
 
-              <label htmlFor="email">Email Address</label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Enter your email"
-              />
+                <div className="form-field">
+                  <label htmlFor="email">Email Address</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    autoComplete="email"
+                  />
+                </div>
+              </div>
 
-              <label htmlFor="service">Service Required</label>
-              <select id="service" defaultValue="">
-                <option value="" disabled>Select a service</option>
-                <option>CCTV & Surveillance</option>
-                <option>Access Control</option>
-                <option>Networking & Infrastructure</option>
-                <option>IT Support</option>
-              </select>
+              <div className="form-field">
+                <label htmlFor="service">Service Required</label>
 
-              <label htmlFor="message">Project Details</label>
-              <textarea
-                id="message"
-                rows="5"
-                placeholder="Tell us about your project..."
-              />
+                <select id="service" name="service" defaultValue="">
+                  <option value="" disabled>Select a service</option>
+                  <option>CCTV & Security Systems</option>
+                  <option>Networking & Internet Solutions</option>
+                  <option>IT Support & Maintenance</option>
+                  <option>Web & Digital Solutions</option>
+                  <option>Integrated Technology Solutions</option>
+                  <option>Other / Not Sure Yet</option>
+                </select>
+              </div>
 
-              <button type="submit">Send Request</button>
+              <div className="form-field">
+                <label htmlFor="message">Project Details</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us a little about what you need..."
+                />
+              </div>
+
+              <button className="form-submit" type="submit">
+                Send Inquiry <span>↗</span>
+              </button>
+
               <p className="form-note">
-                Demonstration form – submission will be connected to a backend later.
+                Demo form — submission will be connected to a backend later.
               </p>
             </form>
           </div>
         </section>
+      </main>
 
-      <footer className="footer">
-        <div className="footer-container">
+      {/* FOOTER */}
+      <footer className="site-footer">
+        <div className="footer-main">
           <div className="footer-brand">
-            <h3>NEXUS<span>TECHNOLOGIES</span></h3>
+            <a className="brand" href="#home">
+              <span className="brand-mark">N</span>
+              <span className="brand-name">
+                NEXUS
+                <small>TECHNOLOGIES</small>
+              </span>
+            </a>
+
             <p>
-              Smart Security. Reliable Technology.
+              Smart security. Reliable connectivity.
               <br />
-              Professional IT and security solutions in Qatar.
+              Technology that moves business forward.
             </p>
           </div>
 
-          <div className="footer-links">
-            <h4>Quick Links</h4>
+          <div className="footer-column">
+            <h4>EXPLORE</h4>
             <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About Us</a>
-            <a href="#projects">Projects</a>
+            <a href="#services">Solutions</a>
+            <a href="#about">About</a>
+            <a href="#projects">Portfolio</a>
             <a href="#contact">Contact</a>
           </div>
 
-          <div className="footer-services">
-            <h4>Our Services</h4>
-            <p>CCTV & Surveillance</p>
-            <p>Access Control</p>
-            <p>Networking</p>
-            <p>IT Support</p>
+          <div className="footer-column">
+            <h4>SOLUTIONS</h4>
+            <a href="#services">CCTV & Security</a>
+            <a href="#services">Networking</a>
+            <a href="#services">IT Support</a>
+            <a href="#services">Web & Digital</a>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p>© 2026 NEXUS TECHNOLOGIES. All rights reserved.</p>
-          <p>Demo Portfolio Website</p>
+          <p>Portfolio demonstration website</p>
         </div>
       </footer>
-
-
-
-
-      </main>
     </>
   )
 }

@@ -1,16 +1,73 @@
 
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #10243a;
+  background: #f5f8fc;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #081525;
+  --color-secondary: #102c49;
+  --color-accent: #13b9dc;
+  --color-accent-dark: #079cbe;
+  --color-text: #10243a;
+  --color-muted: #718096;
+  --color-background: #f5f8fc;
+  --color-white: #ffffff;
+
+  --container-width: 1200px;
+  --section-padding: 100px 8%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f8fc;
+  min-width: 320px;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 button,
 a {
-  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
